@@ -93,7 +93,7 @@
 									    <td>$consulta[cor]</td>
 									    <td>$consulta[portas]</td>
 									    <td>$consulta[combustivel]</td>
-									    <td>
+									    <td> 
 									    	<form action='editarVeiculo.php' method='POST'>
 									    		<input btype='radio' hidden='true' name='codVeiculo' 
 									    		value='$consulta[cod_veiculo]' checked>
