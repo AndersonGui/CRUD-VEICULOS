@@ -1,0 +1,105 @@
+body{
+	background-color: #e0e0e0;
+}
+
+/*************Index do Site***************/
+/*****Nav*****/
+.navbar{
+	margin:0;
+}
+.navbar-inverse{
+	background-color: #f44336;
+	position: relative;
+}
+
+.navbar-inverse .navbar-brand{
+	color:#000;
+}
+
+.navbar-inverse .navbar-nav li a {
+	color:#212121;
+}
+
+/**Conteudo**/
+.conteudo {
+	background-color: #d7ccc8;
+}
+
+.menu {
+    margin:2% auto;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    float:left;
+}
+
+#bordaEsquerda {
+	border-left: 8px solid #f44336;
+	border-right: 8px solid #f44336;
+	position: unset;
+}
+
+.tituloadmin {
+	margin:4% 0 2% 0;
+	display: block;
+}
+
+.menu a {
+	margin:2px;
+}
+
+.conteudo-right img {
+	width: 100%;
+}
+
+footer {
+	height: 60px;
+	text-align: center;
+	color:white;
+	background-color: black;
+}
+
+/*Pagina de Edição do Veiculo!*/
+.listaVeiculos{
+	width:100%;
+	margin-bottom: 3%;
+	text-align:center;
+}
+
+.listaVeiculos h1{
+	font-size: 22px;
+}
+
+.listaVeiculos tr th{
+	background-color: red;
+	color: white;
+}
+/*Background das linhas pares */
+.listaVeiculos tr:nth-child(even){
+	background-color: #bdbdbd;
+}
+
+/*Background das linhas impar */
+.listaVeiculos tr:nth-child(odd){
+	background-color: white;
+}
+
+table, th, td {
+    border: 1px solid black;
+    text-align: center;
+}
+
+/* Pagina de detalhes */
+
+.veiculosD {
+	margin:1% 0 0 1%;
+	border: 1px solid black;
+	width: unset;
+	font-weight: bold;
+	color:red;
+}
+
+.img-veiculo-thumb {
+	margin-top:4px;
+	border: 1px solid black;
+}

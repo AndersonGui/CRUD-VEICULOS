@@ -1,0 +1,15 @@
+.formulario {
+	width: 100%;
+	margin: auto;
+	text-align: left;
+	font-size:13px;
+	background-color:#ede7f6;
+	padding:1%;
+	color:#263238;
+}
+
+.formulario h3{
+	margin-top:0;
+	text-align: center;
+	color:#263238;
+}
