@@ -92,7 +92,7 @@ table, th, td {
 /* Pagina de detalhes */
 
 .veiculosD {
-	margin:1% 0 0 1%;
+	margin:1% 0 1% 1%;
 	border: 1px solid black;
 	width: unset;
 	font-weight: bold;
@@ -100,6 +100,8 @@ table, th, td {
 }
 
 .img-veiculo-thumb {
+	height: 200px;
+	width: 200px;
 	margin-top:4px;
 	border: 1px solid black;
 }

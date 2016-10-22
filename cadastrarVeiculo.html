@@ -50,7 +50,7 @@
 					</div>		
 				</div>
 				<div id="bordaEsquerda" class="col-md-9">
-		<form class="formulario" action="cadastrarVeiculo.php" method="POST" data-toggle="validator">
+		<form class="formulario" action="cadastrarVeiculo.php" method="POST" data-toggle="validator" enctype="multipart/form-data">
 		<h3>INSIRA OS DADOS DO VEICULO!</h3>
 			<!-- Primeira coluna do formulario -->
 			<div class="row">
@@ -167,6 +167,14 @@
 					<div class="form-group">
 						<label for="valorVeiculo">VALOR:</label>
 						<input class="form-control" type="number" id="valorVeiculo" name="valorVeiculo" placeholder="SOMENTE NUMEROS!" required>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-8">
+					<div class="form-group">
+						<label for="valorFoto">Selecione uma foto:</label>
+						<input type="file" name="valorFoto">
 					</div>
 				</div>
 			</div>

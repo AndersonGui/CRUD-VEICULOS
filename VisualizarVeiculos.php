@@ -58,17 +58,28 @@
 							$con_string = "host=$host port=5433 dbname=$dbname user=$user password=$password";
 							$conexao = pg_connect($con_string);
 							$placa = "";
+							
 
 							if(!@($conexao)) {
 							   echo "Não foi possível estabelecer uma conexão com o banco de dados.";
 							} else { 
 							   $sql = "SELECT * FROM VEICULO"; 
-							   $result = pg_exec($conexao, $sql); 
+							   $result = pg_exec($conexao, $sql);
 
-							   for($i=0; $consulta = @pg_fetch_array($result, $i); $i++) { 
+							   for($i=0; $consulta = @pg_fetch_array($result, $i); $i++) {
+							   $foto = "$consulta[imagem]";
+
+							      if($foto == ''){
+							      	$foto = "img/semimagem.gif";
+							      }else if($foto == 'imagem'){
+							      	$foto = "img/semimagem.gif";
+							      }else {
+							      	$foto = "imagens/$consulta[imagem]";
+							      }
+
 							      echo " 
 							      		<div class='veiculosD col-md-5'> 
-							      			<a href='#'><img class='img-veiculo-thumb' src='img/semimagem.gif' alt='Descrição'/></a></br>
+							      			<a href='#'><img class='img-veiculo-thumb' src=$foto /></a></br>
 										    Codigo: $consulta[cod_veiculo]</br>
 										    Placa: $consulta[placa]</br>
 										    Marca: $consulta[marca]</br>

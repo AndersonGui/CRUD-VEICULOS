@@ -1,4 +1,5 @@
 <?php 
+		include "imagem.php";
 		$host="localhost";
 		$dbname = "dbrevenda";
 		$user="postgres";
@@ -16,15 +17,27 @@
 		$km = $_POST["kmVeiculo"];
 		$portas = $_POST["portaVeiculo"];
 		$valor = $_POST["valorVeiculo"];
+		$arqFoto = $_FILES["valorFoto"];
 		$combustivel = $_POST["combustivelVeiculo"];
 		$descricao = $_POST["descVeiculo"];
+
+		//Professor Rodrigo que fez essa parte
+		
+		$resultadoUpload = uploadImagem($arqFoto, 2000, 2000, 5000000, "imagens/");
+		if(gettype($resultadoUpload)=="string")
+		{
+				$foto = $resultadoUpload;
+		}
+		else
+		{
+				$foto = "";
+		}
 
 		
 		//Verifica Opcionais selecionados
 		include 'opcionais.php';
 
-		//Insert na pagina
-
+		//Insert no banco de dados!
 		if(!@($conexao)) {
 			   print "Não foi possível estabelecer uma conexão com o banco de dados.";
 			} else { 
@@ -34,7 +47,7 @@
 								INSERT INTO VEICULO (marca,modelo,placa,ano_fab,ano_modelo,cor,km,portas,combustivel,descricao,valor,imagem )
 								VALUES(
 									'$marca','$modelo','$placa','$anofab','$anoModelo','$cor','$km',$portas,
-									'$combustivel','$descricao',$valor,'imagem');
+									'$combustivel','$descricao',$valor,'$foto');
 								
 								INSERT INTO ACESSORIO (
 									placa,volante_escamoteavel, trava_eletrica, desembacador_traseiro, ar_condicionado, freio_abs, vidros_eletricos, limpador_traseiro, chave_copia, air_bag_duplo, direcao_hidraulica, ar_quente, air_bag)
